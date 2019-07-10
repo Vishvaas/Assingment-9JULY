@@ -1,0 +1,168 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Assement 9-JULY",
+      "version": "0.3.2",
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "hry19WGJFuxE",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "1cfcc869-40af-4a3a-f651-cc161ce351e4"
+      },
+      "source": [
+        "# 1) [1,4,5,6,9] - 14569\n",
+        "def convert(s):\n",
+        "    x=0\n",
+        "    for i in range(len(s)):\n",
+        "        x=x*10+s[i]\n",
+        "    return x\n",
+        "s=[1,4,5,6,9]\n",
+        "convert(s)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "14569"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "pcB38V6tF0y0",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "f5ad0aff-f6d7-47af-9b4b-95db60a3bc04"
+      },
+      "source": [
+        "# 2) [1,4,5,6,9]  - 46 (Consider only even numbers from list)\n",
+        "def even(s):\n",
+        "    x=0\n",
+        "    for i in range(len(s)):\n",
+        "        if s[i]%2==0:\n",
+        "            x=x*10+s[i]\n",
+        "    return x\n",
+        "s=[1,4,5,6,9]\n",
+        "even(s)\n"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "46"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "iBzJtNPOF7Bk",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "fabe1cb4-41d6-4ea3-b31c-815782e990ee"
+      },
+      "source": [
+        "\n",
+        "# 3. [1,2,3,4,5] - [1,4,3,16,5] (Consider only even number and square of it)\n",
+        "def square(s):\n",
+        "    for i in range (len(s)):\n",
+        "        if s[i]%2==0:\n",
+        "            s[i]=s[i]**2\n",
+        "    return s\n",
+        "s=[1,2,3,4,5]\n",
+        "square(s)\n",
+        "\n"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 4, 3, 16, 5]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "smgKZHiCGw7E",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "2915dd63-616c-45fe-946d-cbbde832bb5f"
+      },
+      "source": [
+        "#4)\n",
+        "\n",
+        "def linearSearch5(li):\n",
+        "    print(\"[ \",end=\"\")\n",
+        "    for x in range(len(li)-1):\n",
+        "        if x ==0 or x == len(li) -1:\n",
+        "            print(li[x],end=\",\")\n",
+        "        else:\n",
+        "            print(li[x-1]+li[x],end=\",\")\n",
+        "    print(li[(len(li)-1)],\"]\")\n",
+        "    return\n",
+        "li = [15,19,12,16,4]\n",
+        "linearSearch5(li)"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[ 15,34,31,28,4 ]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
